@@ -1,1 +1,1 @@
-# My solutions to sapmle coding problems
+# My solutions to sample coding problems
