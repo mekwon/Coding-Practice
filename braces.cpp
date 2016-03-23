@@ -5,6 +5,7 @@ using namespace std;
 
 // Returns the number of balanced braces in a given expression
 // Valid "braces" are (), [], and {}
+// Assume expression has no other characters besides those 6
 int balancedBraces(string expression) {
 	stack<char> s;
 	int size = expression.size();
