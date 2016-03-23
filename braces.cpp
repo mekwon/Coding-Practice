@@ -16,8 +16,7 @@ int balancedBraces(string expression) {
 
 	int counter = 0;
 	for (int i = 0; i < size; ++i) {
-		if ((expression[i] == '{') || (expression[i] == '(') || 
-													(expression[i] == '[')) 
+		if ((expression[i] == '{') || (expression[i] == '(') || (expression[i] == '[')) 
 			s.push(expression[i]);
 
 		else if (!s.empty()) {
