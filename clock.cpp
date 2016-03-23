@@ -22,7 +22,6 @@ int checkTime(int rate, int hours) {
 		brokenTime += rate;
 		brokenTime %= 43200;
 
-
 		if (brokenTime == normalTime)
 			++result;
 	}
