@@ -1,1 +1,1 @@
-# Coding-Practice
+# My solutions to sapmle coding problems
