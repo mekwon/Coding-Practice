@@ -66,6 +66,7 @@ void insertion_sort(vector<int>& vec) {
     }
 }
 
+// Quick test
 int main() {
     vector<int> vec = {5, 3, 8, 2, 1, 9};
     //bubble_sort(vec);
