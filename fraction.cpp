@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// Create a Fraction class that supports addition, subtraction, multiplication, and division
+// Create a Fraction class that supports addition, subtraction, multiplication, and division and overloads operators
 class Fraction 
 {
 	private:
@@ -67,6 +67,18 @@ class Fraction
 			int numerator = n * b.d;
 			int denominator = d * b.n;
 			return Fraction(numerator, denominator);
+		}
+
+		friend ostream &operator<<(ostream &os, const Fraction &b)
+		{
+			os << b.n << "/" << b.d << endl;
+			return os;
+		}
+
+		friend istream &operator>>(istream &is, Fraction &b)
+		{
+			is >> b.n >> b.d;
+			return is;
 		}
 
 		void print() 
