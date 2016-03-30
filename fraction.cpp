@@ -80,18 +80,4 @@ class Fraction
 			is >> b.n >> b.d;
 			return is;
 		}
-
-		void print() 
-		{
-			// want to show 2, not 2/1
-			if (d == 1)
-			{
-				cout << n << endl;
-			}
-
-			else 
-			{
-				cout << n << "/" << d << endl;
-			}
-		}
 };
