@@ -37,12 +37,7 @@ void selection_sort(vector<int>& vec) {
             }
         }
         
-        if (was_found)
-        {
-            vec[index] += vec[i];
-            vec[i] = vec[index] - vec[i];
-            vec[index] -= vec[i];  
-        }
+        if (was_found) swap(vec[index], vec[i]);
     }
 }
 
@@ -55,9 +50,7 @@ void insertion_sort(vector<int>& vec) {
         while (j && (vec[j] < vec[j - 1]))
         {
             // switch values
-            vec[j] += vec[j - 1];
-            vec[j - 1] = vec[j] - vec[j - 1];
-            vec[j] -= vec[j - 1];
+            swap(vec[j], vec[j - 1]);
             --j;
         }
     }
