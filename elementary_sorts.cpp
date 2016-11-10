@@ -1,7 +1,7 @@
-// ALL ARE SORTING IN LEAST --> GREATEST ORDER
+// ALL SORTS IN LEAST --> GREATEST ORDER
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 using namespace std;
 
 // Bubble Sort
@@ -12,10 +12,7 @@ void bubble_sort(vector<int>& vec) {
         {
             if (vec[j + 1] < vec[j])
             {
-                // Switching without using temporary variable
-                vec[j + 1] += vec[j];
-                vec[j] = vec[j + 1] - vec[j];
-                vec[j + 1] -= vec[j];
+                swap(vec[j + 1], vec[j]);
             }
         }
     }
@@ -40,12 +37,7 @@ void selection_sort(vector<int>& vec) {
             }
         }
         
-        if (was_found)
-        {
-            vec[index] += vec[i];
-            vec[i] = vec[index] - vec[i];
-            vec[index] -= vec[i];  
-        }
+        if (was_found) swap(vec[index], vec[i]);
     }
 }
 
@@ -58,9 +50,7 @@ void insertion_sort(vector<int>& vec) {
         while (j && (vec[j] < vec[j - 1]))
         {
             // switch values
-            vec[j] += vec[j - 1];
-            vec[j - 1] = vec[j] - vec[j - 1];
-            vec[j] -= vec[j - 1];
+            swap(vec[j], vec[j - 1]);
             --j;
         }
     }
